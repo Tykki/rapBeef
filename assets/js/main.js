@@ -1,4 +1,4 @@
-import './../css/style.css'
+
 const left = document.getElementById("left-side");
 
 const handleMove = e => {
