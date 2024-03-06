@@ -1,8 +1,14 @@
+@import './nav.css';
+
 :root {
   --dark: rgb(20, 20, 20);
   --yellow: rgb(253, 216, 53);
   --blue: rgb(98, 0, 234);
-  
+  --white: #ffffff;
+  --light-grey: #edf0f1;
+  --violet: #655be1;
+  --dark-violet: #5146e1;
+  --black: #21232a;
   --c1: rgb(3, 7, 18);
   --c2: rgb(117, 12, 182);
   
@@ -10,9 +16,20 @@
   --right-color: var(--c2);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {  
   background-color: var(--dark);
-  margin: 0px;
+}
+footer{
+  position: fixed;
+  bottom: 0;
+  margin-left: 45%;
+  z-index: 6;
 }
 
 .side {
@@ -40,7 +57,7 @@ body {
 
 #left-side {
   background-color: var(--left-color);
-  width: 60%;
+  width: 50%;
   z-index: 2;
 }
 
