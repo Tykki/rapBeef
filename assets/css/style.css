@@ -23,20 +23,30 @@
 }
 
 body {  
-  background-color: var(--dark);
+  /* background-color: var(--dark); */
 }
 footer{
   position: fixed;
   bottom: 0;
   margin-left: 45%;
-  z-index: 6;
+  z-index: 3;
+}
+ul {
+  list-style: none;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.hide{
+  display: none;
+}
 .side {
   display: grid;
   height: 100vh;
   overflow: hidden;
-  place-items: center;
+  /* place-items: center; */
   position: absolute;
   width: 100%;
 }
@@ -55,28 +65,65 @@ footer{
   line-height: 0.6em;
 }
 
-#left-side {
+.left-side {
   background-color: var(--left-color);
   width: 50%;
   z-index: 2;
 }
 
-#left-side .title {  
+.left-side .title {  
   color: white;  
 }
 
-#left-side .fancy {
+.left-side .fancy {
   color: var(--right-color);
 }
 
-#right-side {
+.right-side {
   background-color: var(--right-color);
 }
 
-#right-side .title {
+.right-side .title {
   color: var(--dark);
 }
 
-#right-side .fancy {
+.right-side .fancy {
   color: white;
+}
+
+.parallax {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Test_Site_by_Carsten_H%C3%B6ller.jpg/800px-Test_Site_by_Carsten_H%C3%B6ller.jpg');  
+	/* Full height */
+	height: 400px; 
+  
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+  width: 100vw;
+  }
+.parallax-text{
+	padding-top: 200px;
+	font-size: 7vw;
+  text-align: center;
+}
+.parallax-text-last{
+	margin-bottom: -25px;
+	padding-top: 10px;
+}
+.parallax a{
+	color: #ff00ff;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#mnn .left-side{
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .parallax{
+    background-attachment: initial;
+  }
 }
