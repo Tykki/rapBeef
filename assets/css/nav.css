@@ -1,5 +1,6 @@
 
 .nav {
+  scale: .8;
   position: relative;
   display: flex;
   justify-content: center;

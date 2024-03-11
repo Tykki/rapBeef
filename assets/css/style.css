@@ -44,25 +44,11 @@ a {
 }
 .side {
   display: grid;
-  height: 100vh;
-  overflow: hidden;
+  /* height: 100vh; */
+  overflow-x: hidden;
   /* place-items: center; */
   position: absolute;
   width: 100%;
-}
-
-.side .title {
-  font-family: "Montserrat", sans-serif;
-  font-size: 7vw;
-  font-weight: 800;
-  margin: 0px 10vw;
-  width: 80vw;
-}
-
-.side .fancy {
-  font-family: "Permanent Marker", cursive;
-  font-size: 1.8em;
-  line-height: 0.6em;
 }
 
 .left-side {
@@ -71,31 +57,13 @@ a {
   z-index: 2;
 }
 
-.left-side .title {  
-  color: white;  
-}
-
-.left-side .fancy {
-  color: var(--right-color);
-}
-
 .right-side {
   background-color: var(--right-color);
 }
 
-.right-side .title {
-  color: var(--dark);
-}
-
-.right-side .fancy {
-  color: white;
-}
-
 .parallax {
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Test_Site_by_Carsten_H%C3%B6ller.jpg/800px-Test_Site_by_Carsten_H%C3%B6ller.jpg');  
 	/* Full height */
 	height: 400px; 
-  
 	/* Create the parallax scrolling effect */
 	background-attachment: fixed;
 	background-position: center;
@@ -105,25 +73,138 @@ a {
   }
 .parallax-text{
 	padding-top: 200px;
-	font-size: 7vw;
+	font-size: 12vw;
   text-align: center;
 }
-.parallax-text-last{
-	margin-bottom: -25px;
-	padding-top: 10px;
+.content{
+  align-self: center;
+  text-align: center;
+  width: 80%;
+  margin: 10% auto 25%;
 }
-.parallax a{
-	color: #ff00ff;
-	text-decoration: none;
-	font-weight: bold;
+.history, .incident, .outcome{
+  font-size: 4vw;
+  margin-bottom: 5vh;
+}
+.history h2, .incident h2, .outcome h2{
+  height: 6vh;
+}
+
+.history p, .incident p, .outcome p{
+  height: 30vh;
+}
+#bnp .history p{
+  height: 36vh;
+}
+#bnp .incident p{
+  height: 36vh;
+}
+#bnp .outcome p{
+  height: 5vh;
+}
+blockquote{
+  display: none;
+}
+
+.bottom{
+  height: 200px;
+	background-position: top;
+}
+.bottom>h1 {
+  padding-top: 50px;
 }
 
 #mnn .left-side{
   color: white;
+  background-color: pink;
+}
+#mnn .right-side{
+  background-color: red;
+  color: darkblue;
+}
+#pnd .right-side{
+  background-color: black;
+  color: gold;
+}
+#pnd .left-side{
+  background-color: white;
+  color: black;
+}
+#bnp .left-side{
+  background-color: green;
+  color: lightpink;
+
+}
+#bnp .right-side{
+  background-color: blue;
+  color: white;
+}
+#mnn .side{
+  /* height: auto; */
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .parallax{
     background-attachment: initial;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .history, .incident, .outcome{
+    font-size: 3vw;
+  }
+  .history h2, .incident h2, .outcome h2{
+    height: 10vh;
+  }
+  #bnp .incident p{
+    height: 50vh;
+  }
+  #bnp .outcome p{
+    height: 10vh;
+  }
+  .content{
+    margin-bottom: 15%;
+  }
+  #mnn .history p{
+    height: 48vh;
+  }
+  #pnd .history p{
+    height: 50vh;
+  }
+  #bnp .history p{
+    height: 48vh;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .history, .incident, .outcome{
+    font-size: 2vw;
+  }
+  .content{
+    margin-bottom: 10%;
+  }
+  .history div, .incident div, .outcome div{
+    display: inline-block;
+    width: 45%;
+    vertical-align: middle;
+  }
+  .history div:first-child, .incident div:first-child, .outcome div:first-child{
+    margin-right: 9%;
+  }
+  
+  blockquote{
+    display: inherit;
+  }
+  #bnp .history p{
+    /* height: 65vh; */
+  }
+  #bnp .outcome p{
+    height: 45vh;
+  }
+  .content section{
+    /* margin-bottom: 5%; */
+  }
+  .content h2{
+    height: 15vh;
   }
 }

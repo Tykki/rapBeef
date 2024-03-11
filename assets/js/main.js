@@ -8,7 +8,7 @@ const left = document.querySelectorAll('.left-side')
 const hide = () => {
   home.classList.add('hide')
   pac.classList.add('hide')
-  drake.classList.add('hide')
+  // drake.classList.add('hide')
   pusha.classList.add('hide')
   meg.classList.add('hide')
 }
