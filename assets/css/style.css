@@ -86,15 +86,23 @@ a {
 }
 .history, .incident, .outcome{
   height: 30vh;
-  
+}
+#bnp .history, #bnp .incident{
+  height: 42vh;
+}
+#bnp .incident{
+  height: 40vh;;
+}
+.history, .incident{
   margin-bottom: 5vh;
 }
+
 .history h2, .incident h2, .outcome h2{
   height: 6vh;
 }
 
 .history p, .incident p, .outcome p{
-  font-size: 4vw;
+  font-size: 1rem;
 }
 /* #bnp .history p{
   height: 36vh;
@@ -154,10 +162,10 @@ blockquote{
 
 @media screen and (min-width: 768px) {
   .history, .incident, .outcome{
-    font-size: 3vw;
+    /* font-size: 3vw; */
   }
   .history h2, .incident h2, .outcome h2{
-    height: 10vh;
+    /* height: 10vh; */
   }
   /* #bnp .incident p{
     height: 50vh;
@@ -181,7 +189,7 @@ blockquote{
 
 @media screen and (min-width: 1024px) {
   .history, .incident, .outcome{
-    font-size: 2vw;
+    /* font-size: 2vw; */
   }
   .content{
     margin-bottom: 10%;
