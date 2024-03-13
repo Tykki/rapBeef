@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Quicksand&family=Whisper&display=swap');
 @import './nav.css';
-/* https://media.npr.org/assets/img/2013/10/11/pusha-t_wide-4dc0d2f7412df29d9acd086cf15f6de2fe26c656-s1400-c100.jpg
-https://codepen.io/t_afif/pen/QWrdZLG */
+@import './gallery.css';
+
 :root {
   --dark: rgb(20, 20, 20);
   --yellow: rgb(253, 216, 53);
@@ -62,6 +63,17 @@ a {
   background-color: var(--right-color);
 }
 
+#home .side{
+  height: 100vh;
+  place-items: center;
+  color: white;
+}
+#home h1{
+  font-size: 6vw;
+  text-align: center;
+  width: 100vw;
+}
+
 .parallax {
 	height: 40vh; 
   display: grid;
@@ -103,8 +115,11 @@ a {
 #pnd .incident{
   height: 48vh;
 }
-#mnn .incident, #mnn .outcome{
-  height: 20vh;
+#mnn .incident{
+  height: 38vh;
+} 
+#mnn .outcome{
+  height: 35vh;
 }
 .history h2, .incident h2, .outcome h2{
   height: 6vh;
@@ -226,6 +241,10 @@ blockquote{
   blockquote{
     display: inherit;
     font-size: 2vw;
+    font-family: 'Dancing Script';
+  }
+  blockquote::before, blockquote::after{
+    content: '\"';
   }
   #pnd .outcome blockquote{
     margin-top: 15%;
