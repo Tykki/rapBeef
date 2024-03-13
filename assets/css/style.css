@@ -162,10 +162,14 @@ blockquote{
 
 @media screen and (min-width: 768px) {
   .history, .incident, .outcome{
-    /* font-size: 3vw; */
+    height: 32vh !important;
   }
+  /* #bnp .history, .incident, .outcome{} */
   .history h2, .incident h2, .outcome h2{
-    /* height: 10vh; */
+    font-size: 2rem;
+  }
+  .history p, .incident p, .outcome p{
+    font-size: 1.25rem;
   }
   /* #bnp .incident p{
     height: 50vh;
@@ -190,6 +194,9 @@ blockquote{
 @media screen and (min-width: 1024px) {
   .history, .incident, .outcome{
     /* font-size: 2vw; */
+  }
+  .history h2, .incident h2, .outcome h2{
+    font-size: 3rem;
   }
   .content{
     margin-bottom: 10%;
