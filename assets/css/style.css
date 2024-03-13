@@ -63,8 +63,8 @@ a {
 }
 
 .parallax {
-	/* Full height */
-	height: 400px; 
+	height: 40vh; 
+  display: grid;
 	/* Create the parallax scrolling effect */
 	background-attachment: fixed;
 	background-position: center;
@@ -73,7 +73,8 @@ a {
   width: 100vw;
   }
 .parallax-text{
-	padding-top: 200px;
+  align-self: center;
+	/* padding-top: 200px; */
 	font-size: 12vw;
   text-align: center;
 }
@@ -84,7 +85,8 @@ a {
   margin: 10% auto 25%;
 }
 .history, .incident, .outcome{
-  font-size: 4vw;
+  height: 30vh;
+  
   margin-bottom: 5vh;
 }
 .history h2, .incident h2, .outcome h2{
@@ -92,9 +94,9 @@ a {
 }
 
 .history p, .incident p, .outcome p{
-  height: 30vh;
+  font-size: 4vw;
 }
-#bnp .history p{
+/* #bnp .history p{
   height: 36vh;
 }
 #bnp .incident p{
@@ -102,17 +104,17 @@ a {
 }
 #bnp .outcome p{
   height: 5vh;
-}
+} */
 blockquote{
   display: none;
 }
 
 .bottom{
-  height: 200px;
+  height: 30vh;
 	background-position: top;
 }
 .bottom>h1 {
-  padding-top: 50px;
+  padding: 0px;
 }
 
 #mnn .left-side{
@@ -157,16 +159,16 @@ blockquote{
   .history h2, .incident h2, .outcome h2{
     height: 10vh;
   }
-  #bnp .incident p{
+  /* #bnp .incident p{
     height: 50vh;
   }
   #bnp .outcome p{
     height: 10vh;
-  }
+  } */
   .content{
     margin-bottom: 15%;
   }
-  #mnn .history p{
+  /* #mnn .history p{
     height: 48vh;
   }
   #pnd .history p{
@@ -174,7 +176,7 @@ blockquote{
   }
   #bnp .history p{
     height: 48vh;
-  }
+  } */
 }
 
 @media screen and (min-width: 1024px) {
@@ -200,7 +202,7 @@ blockquote{
     /* height: 65vh; */
   }
   #bnp .outcome p{
-    height: 45vh;
+    /* height: 45vh; */
   }
   .content section{
     /* margin-bottom: 5%; */
