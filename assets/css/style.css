@@ -73,7 +73,7 @@ a {
   width: 100vw;
   }
 .parallax-text{
-  mix-blend-mode: overlay;
+  mix-blend-mode: hard-light;
   align-self: center;
 	/* padding-top: 200px; */
 	font-size: 12vw;
