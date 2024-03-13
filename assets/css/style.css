@@ -192,11 +192,15 @@ blockquote{
 }
 
 @media screen and (min-width: 1024px) {
+  
   .history, .incident, .outcome{
-    /* font-size: 2vw; */
+    height: 50vh !important;
   }
   .history h2, .incident h2, .outcome h2{
     font-size: 3rem;
+  }
+  .history p, .incident p, .outcome p{
+    font-size: 1.5vw;
   }
   .content{
     margin-bottom: 10%;
@@ -212,6 +216,7 @@ blockquote{
   
   blockquote{
     display: inherit;
+    font-size: 2vw;
   }
   #bnp .history p{
     /* height: 65vh; */
