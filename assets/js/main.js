@@ -1,4 +1,4 @@
-import { route, locationHandler, routes } from "./router";
+import { route, locationHandler, routes } from "./router.js";
 
 const navlinks = document.querySelector('#nav-links')
 
