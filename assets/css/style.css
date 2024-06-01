@@ -1,261 +1,244 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Quicksand&family=Whisper&display=swap');
 @import './nav.css';
-@import './gallery.css';
+@import './carousel.css';
 
 :root {
-  --dark: rgb(20, 20, 20);
-  --yellow: rgb(253, 216, 53);
-  --blue: rgb(98, 0, 234);
-  --white: #ffffff;
-  --light-grey: #edf0f1;
-  --violet: #655be1;
-  --dark-violet: #5146e1;
-  --black: #21232a;
-  --c1: rgb(3, 7, 18);
-  --c2: rgb(117, 12, 182);
+    
+  }
   
-  --left-color: var(--c1);
-  --right-color: var(--c2);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {  
-  /* background-color: var(--dark); */
-}
-footer{
-  position: fixed;
-  bottom: 0;
-  margin-left: 45%;
-  z-index: 3;
-}
-ul {
-  list-style: none;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-.hide{
-  display: none;
-}
-.side {
-  display: grid;
-  /* height: 100vh; */
-  overflow-x: hidden;
-  /* place-items: center; */
-  position: absolute;
-  width: 100%;
-}
-
-.left-side {
-  background-color: var(--left-color);
-  width: 50%;
-  z-index: 2;
-}
-
-.right-side {
-  background-color: var(--right-color);
-}
-
-#home .side{
-  height: 100vh;
-  place-items: center;
-  color: white;
-}
-#home h1{
-  font-size: 6vw;
-  text-align: center;
-  width: 100vw;
-}
-
-.parallax {
-	height: 40vh; 
-  display: grid;
-	/* Create the parallax scrolling effect */
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-  width: 100vw;
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-.parallax-text{
-  mix-blend-mode: hard-light;
-  align-self: center;
-	/* padding-top: 200px; */
-	font-size: 12vw;
-  text-align: center;
-}
-.content{
-  align-self: center;
-  text-align: center;
-  width: 80%;
-  margin: 10% auto 25%;
-}
-.history, .incident, .outcome{
-  height: 30vh;
-}
-.history, .incident{
-  margin-bottom: 5vh;
-}
-#bnp .history, #bnp .incident{
-  height: 42vh;
-}
-#bnp .incident{
-  height: 40vh;;
-}
-#pnd .history{
-  height: 35vh;
-}
-#pnd .incident{
-  height: 48vh;
-}
-#mnn .incident{
-  height: 38vh;
-} 
-#mnn .outcome{
-  height: 35vh;
-}
-.history h2, .incident h2, .outcome h2{
-  height: 6vh;
-}
-
-.history p, .incident p, .outcome p{
-  font-size: 1rem;
-}
-/* #bnp .history p{
-  height: 36vh;
-}
-#bnp .incident p{
-  height: 36vh;
-}
-#bnp .outcome p{
-  height: 5vh;
-} */
-blockquote{
-  display: none;
-}
-
-.bottom{
-  height: 30vh;
-	background-position: top;
-}
-.bottom>h1 {
-  padding: 0px;
-}
-
-#mnn .left-side{
-  color: white;
-  background-color: pink;
-}
-#mnn .right-side{
-  background-color: red;
-  color: darkblue;
-}
-#pnd .right-side{
-  background-color: black;
-  color: gold;
-}
-#pnd .left-side{
-  background-color: white;
-  color: black;
-}
-#bnp .left-side{
-  background-color: green;
-  color: lightpink;
-
-}
-#bnp .right-side{
-  background-color: blue;
-  color: white;
-}
-#mnn .side{
-  /* height: auto; */
-}
-
-@media screen and (max-width: 767px) {
-  .parallax{
-    background-attachment: initial;
+  
+  body {  
+    /* background-color: var(--dark); */
   }
-}
-
-@media screen and (min-width: 768px) {
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .hide{
+    display: none;
+  }
+  .side {
+    display: grid;
+    /* height: 100vh; */
+    overflow-x: hidden;
+    /* place-items: center; */
+    position: absolute;
+    width: 100%;
+  }
+  
+  .left-side {
+    background-color: rgb(3, 7, 18);
+    width: 50%;
+    z-index: 3;
+  }
+  
+  .right-side {
+    z-index: 2;
+    background-color: rgb(117, 12, 182);
+  }
+  
+  #home .side{
+    height: 100vh;
+    place-items: center;
+    color: white;
+  }
+  #home h1{
+    font-size: 6vw;
+    text-align: center;
+    width: 100vw;
+  }
+  
+  .parallax {
+      height: 40vh; 
+    display: grid;
+      /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    width: 100vw;
+    }
+  .parallax-text{
+    mix-blend-mode: hard-light;
+    align-self: center;
+      /* padding-top: 200px; */
+      font-size: 12vw;
+    text-align: center;
+  }
+  .content{
+    align-self: center;
+    text-align: center;
+    width: 80%;
+    margin: 10% auto 25%;
+  }
   .history, .incident, .outcome{
-    height: 32vh !important;
+    height: 30vh;
   }
-  /* #bnp .history, .incident, .outcome{} */
+  .history, .incident{
+    margin-bottom: 5vh;
+  }
+  #bnp .history, #bnp .incident{
+    height: 42vh;
+  }
+  #bnp .incident{
+    height: 40vh;;
+  }
+  #pnd .history{
+    height: 35vh;
+  }
+  #pnd .incident{
+    height: 48vh;
+  }
+  #mnn .incident{
+    height: 38vh;
+  } 
+  #mnn .outcome{
+    height: 35vh;
+  }
   .history h2, .incident h2, .outcome h2{
-    font-size: 2rem;
+    height: 6vh;
   }
+  
   .history p, .incident p, .outcome p{
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
-  /* #bnp .incident p{
-    height: 50vh;
+  /* #bnp .history p{
+    height: 36vh;
+  }
+  #bnp .incident p{
+    height: 36vh;
   }
   #bnp .outcome p{
-    height: 10vh;
+    height: 5vh;
   } */
-  .content{
-    margin-bottom: 15%;
-  }
-  /* #mnn .history p{
-    height: 48vh;
-  }
-  #pnd .history p{
-    height: 50vh;
-  }
-  #bnp .history p{
-    height: 48vh;
-  } */
-}
-
-@media screen and (min-width: 1024px) {
-  
-  .history, .incident, .outcome{
-    height: 50vh !important;
-  }
-  .history h2, .incident h2, .outcome h2{
-    font-size: 3vw;
-  }
-  .history p, .incident p, .outcome p{
-    font-size: 1.5vw;
-  }
-  .content{
-    margin-bottom: 10%;
-  }
-  .history div, .incident div, .outcome div{
-    display: inline-block;
-    width: 45%;
-    vertical-align: middle;
-  }
-  .history div:first-child, .incident div:first-child, .outcome div:first-child{
-    margin-right: 9%;
-  }
-  
   blockquote{
-    display: inherit;
-    font-size: 2vw;
-    font-family: 'Dancing Script';
+    display: none;
   }
-  blockquote::before, blockquote::after{
-    content: '\"';
+  
+  .bottom{
+    height: 30vh;
+      background-position: top;
   }
-  #pnd .outcome blockquote{
-    margin-top: 15%;
+  .bottom>h1 {
+    padding: 0px;
   }
-  #pnb .history h2{
-    font-size: 2.5;
+  
+  #mnn .left-side{
+    color: white;
+    background-color: pink;
   }
-  .content section{
-    /* margin-bottom: 5%; */
+  #mnn .right-side{
+    background-color: red;
+    color: darkblue;
   }
-  .content h2{
-    height: 15vh;
+  #pnd .right-side{
+    background-color: black;
+    color: gold;
   }
-}
+  #pnd .left-side{
+    background-color: white;
+    color: black;
+  }
+  #bnp .left-side{
+    background-color: green;
+    color: lightpink;
+  
+  }
+  #bnp .right-side{
+    background-color: blue;
+    color: white;
+  }
+  #mnn .side{
+    /* height: auto; */
+  }
+  
+  @media screen and (max-width: 767px) {
+    .parallax{
+      background-attachment: initial;
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+    .history, .incident, .outcome{
+      height: 32vh !important;
+    }
+    /* #bnp .history, .incident, .outcome{} */
+    .history h2, .incident h2, .outcome h2{
+      font-size: 2rem;
+    }
+    .history p, .incident p, .outcome p{
+      font-size: 1.25rem;
+    }
+    /* #bnp .incident p{
+      height: 50vh;
+    }
+    #bnp .outcome p{
+      height: 10vh;
+    } */
+    .content{
+      margin-bottom: 15%;
+    }
+    /* #mnn .history p{
+      height: 48vh;
+    }
+    #pnd .history p{
+      height: 50vh;
+    }
+    #bnp .history p{
+      height: 48vh;
+    } */
+  }
+  
+  @media screen and (min-width: 1024px) {
+    
+    .history, .incident, .outcome{
+      height: 50vh !important;
+    }
+    .history h2, .incident h2, .outcome h2{
+      font-size: 3vw;
+    }
+    .history p, .incident p, .outcome p{
+      font-size: 1.5vw;
+    }
+    .content{
+      margin-bottom: 10%;
+    }
+    .history div, .incident div, .outcome div{
+      display: inline-block;
+      width: 45%;
+      vertical-align: middle;
+    }
+    .history div:first-child, .incident div:first-child, .outcome div:first-child{
+      margin-right: 9%;
+    }
+    
+    blockquote{
+      display: inherit;
+      font-size: 2vw;
+      font-family: 'Dancing Script';
+    }
+    blockquote::before, blockquote::after{
+      content: '\"';
+    }
+    #pnd .outcome blockquote{
+      margin-top: 15%;
+    }
+    #pnb .history h2{
+      font-size: 2.5;
+    }
+    .content section{
+      /* margin-bottom: 5%; */
+    }
+    .content h2{
+      height: 15vh;
+    }
+  }

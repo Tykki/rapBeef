@@ -1,52 +1,40 @@
-const home = document.querySelector('#home')
-const pac = document.querySelector('#bnp')
-const drake = document.querySelector('#dnm')
-const pusha = document.querySelector('#pnd')
-const meg = document.querySelector('#mnn')
-const left = document.querySelectorAll('.left-side')
+import { route, locationHandler, routes } from "./router";
 
-const hide = () => {
-  home.classList.add('hide')
-  pac.classList.add('hide')
-  // drake.classList.add('hide')
-  pusha.classList.add('hide')
-  meg.classList.add('hide')
-}
+const navlinks = document.querySelector('#nav-links')
 
-const handleMove = e => {
-  left.forEach(page => {
-    page.style.width = `${e.clientX / window.innerWidth * 100}%`;
-
-  })
-}
-
-const hashHandler = (hash) => {
-  if (!hash) {
-   return
+const toggleNav = () => {
+    document.body.dataset.nav = document.body.dataset.nav === "true" ? "false" : "true";
   }
-console.log(hash)
-  hide()
-   if (hash === "#biggiePac"){
-       pac.classList.remove('hide')
-      //  navTitle.innerHTML = 'South Loop'
-  } else if (hash === "#drakeMeek"){
-      drake.classList.remove('hide')
-      // navTitle.innerHTML = 'North West'
-  } else if (hash === "#drakePusha"){
-      pusha.classList.remove('hide')
-      // navTitle.innerHTML = 'Downtown'
-  } else if (hash === "#nickiMeg"){
-      meg.classList.remove('hide')
-  } else if (hash === "#home"){
-      home.classList.remove('hide')
-   } else {
-   location.hash = '#home'
-  //  location.reload()
- }
+const handleMove = e => {
+    document.querySelector('.left-side').style.width = `${e.clientX / window.innerWidth * 100}%`;
 }
 
-window.addEventListener('hashchange', (e) => hashHandler(e.target.location.hash))
-hashHandler(window.location.hash)
+for (const route in routes) {
+    route !== '404' ? 
+    navlinks.innerHTML +=  `
+    <a class="nav-link" href="${route}">
+      <h2 class="nav-link-label rubik-font">${routes[route].title}</h2>
+      <img class="nav-link-image" src="${routes[route].img}" />
+    </a>
+    `: null
+}
+document.querySelector('#nav-toggle').addEventListener('click', toggleNav)
+// create document click that watches the nav links only
+document.addEventListener("click", (e) => {
+    const { target } = e;
+    if (!target.matches("nav a")) {
+        return;
+    }
+    e.preventDefault();
+    route(e);
+});
+// add an event listener to the window that watches for url changes
+window.onpopstate = locationHandler;
+// call the urlLocationHandler function to handle the initial url
+window.route = route;
+// call the urlLocationHandler function to handle the initial url
+locationHandler();
+
 document.onmousemove = e => handleMove(e);
 
 document.ontouchmove = e => handleMove(e.touches[0]);
