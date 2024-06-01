@@ -5,24 +5,24 @@ const routes = {
         description: 'Page not found',
         img: 'https://images.unsplash.com/photo-1553356084-58ef4a67b2a7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80',
     },
-    '/': {
+    '/rapBeef/': {
         template: './assets/page/home.html',
         title: 'Home',
         description: 'This is the home page',
         img: 'https://images.unsplash.com/photo-1666091863721-54331a5db52d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80',
     },
-    '/bnp': {
+    '/rapBeef/bnp': {
         template: './assets/page/biggiePac.html',
         title: 'Biggie vs Pac',
         description: 'This is the about page',
         img: 'https://images.unsplash.com/photo-1666055642230-1595470b98fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=995&q=80',
     },
-    '/pnd': {
+    '/rapBeef/pnd': {
         template: './assets/page/pushaDrake.html',
         title: 'Pusha T vs. Drake',
         description: 'This is the contact page',
         img: 'https://images.unsplash.com/photo-1666005487638-61f45819c975?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80',
-    },'/mnn': {
+    },'/rapBeef/mnn': {
         template: './assets/page/megNicki.html',
         title: 'Meg vs. Nicki',
         description: 'This is the contact page',
