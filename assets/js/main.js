@@ -20,7 +20,10 @@ for (const route in routes) {
 }
 document.querySelector('#nav-toggle').addEventListener('click', toggleNav)
 // create a function that watches the hash and calls the urlLocationHandler
-window.addEventListener("hashchange", locationHandler);
+window.addEventListener("hashchange", ()=> {
+    locationHandler()
+    toggleNav()
+});
 // call the urlLocationHandler to load the page
 locationHandler();
 // create document click that watches the nav links only
