@@ -1,4 +1,4 @@
-import { route, locationHandler, routes } from "./router.js";
+import { locationHandler, routes } from "./router.js";
 
 const navlinks = document.querySelector('#nav-links')
 
@@ -12,28 +12,32 @@ const handleMove = e => {
 for (const route in routes) {
     route !== '404' ? 
     navlinks.innerHTML +=  `
-    <a class="nav-link" href="${route}">
+    <a class="nav-link" href="#${route}">
       <h2 class="nav-link-label rubik-font">${routes[route].title}</h2>
       <img class="nav-link-image" src="${routes[route].img}" />
     </a>
     `: null
 }
 document.querySelector('#nav-toggle').addEventListener('click', toggleNav)
-// create document click that watches the nav links only
-document.addEventListener("click", (e) => {
-    const { target } = e;
-    if (!target.matches("nav a")) {
-        return;
-    }
-    e.preventDefault();
-    route(e);
-});
-// add an event listener to the window that watches for url changes
-window.onpopstate = locationHandler;
-// call the urlLocationHandler function to handle the initial url
-window.route = route;
-// call the urlLocationHandler function to handle the initial url
+// create a function that watches the hash and calls the urlLocationHandler
+window.addEventListener("hashchange", locationHandler);
+// call the urlLocationHandler to load the page
 locationHandler();
+// create document click that watches the nav links only
+// document.addEventListener("click", (e) => {
+//     const { target } = e;
+//     if (!target.matches("nav a")) {
+//         return;
+//     }
+//     e.preventDefault();
+//     route(e);
+// });
+// // add an event listener to the window that watches for url changes
+// window.onpopstate = locationHandler;
+// // call the urlLocationHandler function to handle the initial url
+// window.route = route;
+// // call the urlLocationHandler function to handle the initial url
+// locationHandler();
 
 document.onmousemove = e => handleMove(e);
 
