@@ -9,24 +9,24 @@ const routes = {
         template: './assets/page/home.html',
         title: 'Home',
         description: 'This is the home page',
-        img: 'https://images.unsplash.com/photo-1666091863721-54331a5db52d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80',
+        img: 'https://variety.com/wp-content/uploads/2024/04/featured_diss_tracks.jpg',
     },
     bnp: {
         template: './assets/page/biggiePac.html',
         title: 'Biggie vs Pac',
         description: 'This is the about page',
-        img: 'https://images.unsplash.com/photo-1666055642230-1595470b98fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=995&q=80',
+        img: 'https://20627419.fs1.hubspotusercontent-na1.net/hubfs/20627419/The%20Hustle/Assets/Images/326830170-biggiepac_og_image.webp',
     },
     pnd: {
         template: './assets/page/pushaDrake.html',
         title: 'Pusha T vs. Drake',
         description: 'This is the contact page',
-        img: 'https://images.unsplash.com/photo-1666005487638-61f45819c975?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80',
+        img: 'https://nowtoronto.com/wp-content/uploads/2020/05/Pusha-T-Drake.jpg',
     },mnn: {
         template: './assets/page/megNicki.html',
         title: 'Meg vs. Nicki',
         description: 'This is the contact page',
-        img: 'https://images.unsplash.com/photo-1665910407771-bc84ad45676b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80',
+        img: 'https://assets.teenvogue.com/photos/65b92050ddd99dbdb18ca269/3:2/w_2560%2Cc_limit/THIS%2520ONE%2520(1).jpg',
     },
 };
 
